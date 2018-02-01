@@ -1,0 +1,31 @@
+{
+  "name": "template-engine",
+  "version": "1.0.0",
+  "description": "demo template engine",
+  "main": "engine.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    },
+    "roots": [
+      "test"
+    ]
+  },
+  "author": "pkpk1234",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-jest": "^22.1.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-flow": "^6.23.0",
+    "flow-bin": "^0.64.0",
+    "jest": "^22.1.4",
+    "regenerator-runtime": "^0.11.1"
+  },
+  "dependencies": {
+    "winston": "^2.4.0"
+  }
+}
