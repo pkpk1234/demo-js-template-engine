@@ -1,4 +1,10 @@
 //@flow
+
+function quote(str:string) {
+  let newStr = str.replace(/\"/g,'\"');
+  return newStr;
+}
+
 class Token {
   value:string;
   type:string;
@@ -9,7 +15,11 @@ class Token {
   }
 
   toString():string {
+    if(this.type === "text") {
+      return '"'+quote(this.value)+'"';
+    } else {
     return this.value;
+    }
   }
 }
 

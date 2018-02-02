@@ -34,6 +34,9 @@ class Tokenizer {
             //将str设置为}}之后的内容
             str = str.slice(index + 2);
         }
+        if(str.length > 0) {
+            tokens.push(new Token(str,"text"));
+        }
         return tokens;
     }
 
