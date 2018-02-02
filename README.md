@@ -158,7 +158,7 @@ class Engine {
      * 使用输入的模板构造渲染函数
      * @param {*} template 
      */
-    compile(template: string): Function {
+    compile(template: string): Object {
         let tokens = tokenizer.getTokens(template);
         let functionBody = tokens.join(' + ');
         return {
