@@ -3,7 +3,14 @@ import Token from "./token";
 const startToken = "{{";
 const endToken = "}}";
 
+/**
+ * @author 李佳明 https://github.com/pkpk1234
+ */
 class Tokenizer {
+    /**
+     * 根据输入构造模板
+     * @param {*} templateString 
+     */
     getTokens(templateString: string): Array < Token > {
         var str = templateString;
         let tokens: Array < Token > = [];
@@ -34,6 +41,7 @@ class Tokenizer {
             //将str设置为}}之后的内容
             str = str.slice(index + 2);
         }
+        //如果最后一个}}之后还有值，则构造text类型的token
         if(str.length > 0) {
             tokens.push(new Token(str,"text"));
         }
